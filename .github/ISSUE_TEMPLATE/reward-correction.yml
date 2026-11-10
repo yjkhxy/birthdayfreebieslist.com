@@ -1,0 +1,50 @@
+name: Reward correction
+description: Report an outdated birthday reward, missing condition or official source.
+title: "[Correction] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help us check the claim against official evidence. Do not post your full birthday, account details, reward codes or personal information.
+  - type: input
+    id: brand
+    attributes:
+      label: Brand or program
+      placeholder: Brand name
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Affected directory or documentation page
+      placeholder: https://birthdayfreebieslist.com/brand/...
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What should change?
+      description: Explain the current claim, the proposed correction, and any purchase or enrollment conditions.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Official evidence
+      description: Link the brand's official rewards terms or FAQ. If unavailable, say so and mark the claim unverified.
+    validations:
+      required: true
+  - type: input
+    id: checked
+    attributes:
+      label: Date checked
+      placeholder: YYYY-MM-DD
+    validations:
+      required: true
+  - type: input
+    id: scope
+    attributes:
+      label: Country, channel and other limits
+      description: For example, US in-store only, qualifying membership tier, or location-specific evidence.
+    validations:
+      required: true
